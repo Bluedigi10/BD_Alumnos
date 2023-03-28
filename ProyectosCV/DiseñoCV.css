@@ -1,0 +1,155 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+  }
+.image-profile{
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+ }
+ header{
+    padding:25px;
+    margin: auto;
+    background-color:#899752;
+ }
+
+ h1{
+    color: #121310;
+ }
+
+ h2{
+    padding:5px;
+    color: #121310;
+    margin-bottom: 2px;
+ }
+
+ h3{
+    color: #121310;
+ }
+
+.puesto{
+    color:#D6E68A;
+ }
+
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+ 
+main{
+    background-color:#D6E68A;
+    
+}
+
+p{
+    padding-bottom: 10px;
+}
+section{
+    background-color: #95AA61;
+    max-width: 1000px;
+    text-align: justify;
+}
+
+.general{
+    background-color: #95AA61;
+    max-width: 1000px;
+    margin:auto;
+    padding: 20px 50px 20px 50px;
+    text-align: justify;
+    border-style: groove;
+}
+
+.ocupacion{
+    margin: 10px;
+    padding: 5px 0 5px 0;
+}
+
+.habilidades li{
+    margin: 5px;
+}
+
+.trabajo{
+    border-style: groove;
+    margin:auto;
+    padding:50px;
+}
+article{
+    padding: 15px;
+}
+
+.educacion{
+    border-style: groove;
+    margin:auto;
+    padding:50px;
+}
+
+.educacion li{
+    margin:5px;
+}
+
+
+div.gallery{
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    display: block;
+    border-color: #899752;
+    border-style:groove;
+    
+}
+div.gallery:hover{
+    border: 1px solid #777;
+}
+div.gallery img{
+    width: 100%;
+    height: auto;
+    border-style:ridge;
+    border-color: #899752;
+}
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.caja{
+    text-align: center;
+    margin: auto;
+    border-style:groove
+}
+.certificaciones{
+    
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+    flex-direction: wrap;
+    
+
+}
+.certificaciones > div {
+    background-color: #F6F8EE;
+    margin: 5px;
+    padding: 10px;
+   
+}
+.certificaciones li{
+    margin: 5px;
+}
+
+.redes-sociales{
+    border-style: groove;
+    margin: auto;
+}
+.links{
+    display: inline-block;
+}
+footer{
+    background-color: #121310;
+    color:#F6F8EE;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
