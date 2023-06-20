@@ -1,33 +1,3 @@
-// var Alumnos = [
-//     {"Nombre":"Emmanuel","Apellidos":"Martinez","Edad":24,"Materias Inscritas":["Español","Matematicas","Inglés"],"Calificaciones":[10,8,9]},
-//     {"Nombre":"Emmanuel","Apellidos":"Ventura","Edad":24,"Materias Inscritas":["Español","Matematicas","Inglés"],"Calificaciones":[9,10,8]},
-//     {"Nombre":"Carlos","Apellidos":"Casillas","Edad":24,"Materias Inscritas":["Español","Matematicas","Inglés"],"Calificaciones":[10,10,10]},
-// ];
-// console.log(Alumnos.length);
-// AltaAlumnos();
-// InscribirClase();
-// function AltaAlumnos(){
-//     let nombre="Mario";
-//     let apellido="Campos";
-//     let edad=25;
-//     var nuevo={
-//         "Nombre":nombre,"Apellidos":apellido,"Edad":edad,"Materias Inscritas":[],"Calificaciones":[]
-//     };
-//     Alumnos.push(nuevo);
-//     console.log(Alumnos);
-// }
-// function InscribirClase(){
-//     let nombre = "Mario";
-//     let apellido = "Campos";
-//     let materias =["Ingles","Español","Biologia"];
-//     for(let i=0;i<Alumnos.length;i++){
-//         if(Alumnos[i]['Nombre']==nombre && Alumnos[i]['Apellidos']==apellido){
-//             Alumnos[i]['Materias Inscritas'].push(materias);
-//             console.log(Alumnos);
-//         }
-//     }
-// }
-
 class Alumno{
     Nombre= '';
     Apellido= '';
