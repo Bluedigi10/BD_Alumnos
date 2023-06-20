@@ -33,7 +33,7 @@
           </div>
           <div class="mb-3">
             <label for="edad" class="form-label">Edad:</label>
-            <input type="number" class="form-control" id="edad" required>
+            <input type="number" class="form-control" id="edad" min="1" max="99" required>
           </div>
           <div class="mb-3">
             <label for="materias" class="form-label">Materias inscritas (separadas por comas):</label>
@@ -44,7 +44,7 @@
             <input type="text" class="form-control" id="calificaciones" required>
           </div>
           <div class="d-flex flex-column text-center px-5 mt-3 mb-3">
-            <button class="btn btn-primary" onclick="sesion()">Guardar</button>
+            <button class="btn btn-primary" onclick="guardar()">Guardar</button>
           </div>
         </form>
         <div class="d-flex flex-column text-center px-5 mt-3 mb-3">

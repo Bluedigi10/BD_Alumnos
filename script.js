@@ -54,3 +54,18 @@ class Grupos{
         return -1;
     }
 }
+
+function guardar(){
+    let nombre = document.getElementById("nombre").value;
+    let apellidos = document.getElementById("apellidos").value;
+    let edad = document.getElementById("edad").value;
+    let materias = document.getElementById("materias").value;
+    let calificaciones = document.getElementById("calificaciones").value;
+
+    console.log("Guardando alumno")
+    console.log(nombre)
+    console.log(apellidos)
+    console.log(edad)
+    console.log(materias)
+    console.log(calificaciones)
+}
