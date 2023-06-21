@@ -2,57 +2,83 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Alumnos BD</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Alumnos BD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <div class="container mt-5 mb-5 d-flex justify-content-center">
-    <div class="card px-1 py-4">
-      <div class="card-body">
-        <form id="formulario">
-          <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre:</label>
-            <input type="text" class="form-control" id="nombre" required>
-          </div>
-          <div class="mb-3">
-            <label for="apellidos" class="form-label">Apellidos:</label>
-            <input type="text" class="form-control" id="apellidos" required>
-          </div>
-          <div class="mb-3">
-            <label for="edad" class="form-label">Edad:</label>
-            <input type="number" class="form-control" id="edad" min="1" max="99" required>
-          </div>
-          <div class="mb-3">
-            <label for="materias" class="form-label">Materias inscritas (separadas por comas):</label>
-            <input type="text" class="form-control" id="materias" required>
-          </div>
-          <div class="mb-3">
-            <label for="calificaciones" class="form-label">Calificaciones (separadas por comas):</label>
-            <input type="text" class="form-control" id="calificaciones" required>
-          </div>
-          <div class="d-flex flex-column text-center px-5 mt-3 mb-3">
-            <button class="btn btn-primary" onclick="guardar()">Guardar</button>
-          </div>
-        </form>
-        <div class="d-flex flex-column text-center px-5 mt-3 mb-3">
-          <small class="agree-text">&copy Lobos 2023</small>
-        </div>
-      </div>
-    </div>
-  </div>
+    <main class="container mt-5 mb-5 d-flex justify-content-center">
+        <section id="menu">
+            <button type="button" class="btn btn-secondary" id="NuevoAlumno" onclick="agregar()">Alumnos</button>
+            <button type="button" class="btn btn-secondary" id="NuevaMateria" onclick="agregarmateria()">Asignar Materia</button>
+            <button type="button" class="btn btn-secondary" id="NuevaCalif" onclick="">Asignar Calificacion</button>
+            <button type="button" class="btn btn-secondary" id="NuevoGrupo" onclick="">Crear Grupo</button>
+            <section id="OpcionAlumno" class="card px-1 py-4">
+                <div class="card-body">
+                  <form id="formulario">
+                    <div class="mb-3">
+                      <label for="nombre" class="form-label">Nombre:</label>
+                      <input type="text" class="form-control" id="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="apellidos" class="form-label">Apellidos:</label>
+                      <input type="text" class="form-control" id="apellidos" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="edad" class="form-label">Edad:</label>
+                      <input type="number" class="form-control" id="edad" min="1" max="99" required>
+                    </div>
+                    <div class="d-flex flex-column text-center px-5 mt-3 mb-3">
+                      <button type="button" class="btn btn-primary" onclick="guardarAlumno()">Guardar</button>
+                    </div>
+                    <div class="d-flex flex-column text-center px-5 mt-3 mb-3">
+                      <button type="button" class="btn btn-primary" onclick="salir()">Salir</button>
+                    </div>
+                  </form>
+                  <div class="d-flex flex-column text-center px-5 mt-3 mb-3">
+                    <small class="agree-text">&copy Lobos 2023</small>
+                  </div>
+                </div>
+              </section>
+              <section id="OpcionMateria" class="card px-1 py-4">
+                <div class="card-body">
+                  <form id="formulario">
+                    <div class="mb-3">
+                      <label for="nombre" class="form-label">Nombre:</label>
+                      <input type="text" class="form-control" id="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="apellidos" class="form-label">Apellidos:</label>
+                      <input type="text" class="form-control" id="apellidos" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="edad" class="form-label">Materia:</label>
+                      <input type="text" class="form-control" id="materia" min="1" max="99" required>
+                    </div>
+                    <div class="d-flex flex-column text-center px-5 mt-3 mb-3">
+                      <button type="button" class="btn btn-primary" onclick="guardar()">Guardar</button>
+                    </div>
+                    <div class="d-flex flex-column text-center px-5 mt-3 mb-3">
+                      <button type="button" class="btn btn-primary" onclick="salir()">Salir</button>
+                    </div>
+                  </form>
+                  <div class="d-flex flex-column text-center px-5 mt-3 mb-3">
+                    <small class="agree-text">&copy Lobos 2023</small>
+                  </div>
+                </div>
+              </section>
+        </section>
+      </main>
+    <script src="script.js"></script>
 </body>
-
 </html>
