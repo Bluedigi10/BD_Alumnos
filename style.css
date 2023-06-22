@@ -10,6 +10,6 @@ body {
 form {
     display:block;
 }
-#OpcionAlumno,#OpcionMateria{
+#OpcionAlumno,#OpcionMateria,#OpcionCalif,#OpcionGrupo{
     display: none;
 }

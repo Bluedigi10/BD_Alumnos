@@ -19,10 +19,13 @@
 <body>
     <main class="container mt-5 mb-5 d-flex justify-content-center">
         <section id="menu">
-            <button type="button" class="btn btn-secondary" id="NuevoAlumno" onclick="agregar()">Alumnos</button>
-            <button type="button" class="btn btn-secondary" id="NuevaMateria" onclick="agregarmateria()">Asignar Materia</button>
-            <button type="button" class="btn btn-secondary" id="NuevaCalif" onclick="">Asignar Calificacion</button>
-            <button type="button" class="btn btn-secondary" id="NuevoGrupo" onclick="">Crear Grupo</button>
+            <div>
+              <button type="button" class="btn btn-secondary" id="NuevoAlumno" onclick="agregar()">Alumnos</button>
+              <button type="button" class="btn btn-secondary" id="NuevaMateria" onclick="agregarmateria()">Asignar Materia</button>
+              <button type="button" class="btn btn-secondary" id="NuevaCalif" onclick="agregarcalif()">Asignar Calificacion</button>
+              <button type="button" class="btn btn-secondary" id="NuevoGrupo" onclick="agregargrupo()">Crear Grupo</button>
+              <button type="button" class="btn btn-secondary" id="NuevoGrupo" onclick="mostrarAlumnos()">Mostrar Alumnos</button>
+            </div>
             <section id="OpcionAlumno" class="card px-1 py-4">
                 <div class="card-body">
                   <form id="formulario">
@@ -64,6 +67,64 @@
                     <div class="mb-3">
                       <label for="edad" class="form-label">Materia:</label>
                       <input type="text" class="form-control" id="materia" min="1" max="99" required>
+                    </div>
+                    <div class="d-flex flex-column text-center px-5 mt-3 mb-3">
+                      <button type="button" class="btn btn-primary" onclick="guardar()">Guardar</button>
+                    </div>
+                    <div class="d-flex flex-column text-center px-5 mt-3 mb-3">
+                      <button type="button" class="btn btn-primary" onclick="salir()">Salir</button>
+                    </div>
+                  </form>
+                  <div class="d-flex flex-column text-center px-5 mt-3 mb-3">
+                    <small class="agree-text">&copy Lobos 2023</small>
+                  </div>
+                </div>
+              </section>
+              <section id="OpcionGrupo" class="card px-1 py-4">
+                <div class="card-body">
+                  <form id="formulario">
+                    <div class="mb-3">
+                      <label for="nombre" class="form-label">Nombre:</label>
+                      <input type="text" class="form-control" id="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="apellidos" class="form-label">Apellidos:</label>
+                      <input type="text" class="form-control" id="apellidos" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="edad" class="form-label">Grupo:</label>
+                      <input type="text" class="form-control" id="materia" min="1" max="99" required>
+                    </div>
+                    <div class="d-flex flex-column text-center px-5 mt-3 mb-3">
+                      <button type="button" class="btn btn-primary" onclick="guardar()">Guardar</button>
+                    </div>
+                    <div class="d-flex flex-column text-center px-5 mt-3 mb-3">
+                      <button type="button" class="btn btn-primary" onclick="salir()">Salir</button>
+                    </div>
+                  </form>
+                  <div class="d-flex flex-column text-center px-5 mt-3 mb-3">
+                    <small class="agree-text">&copy Lobos 2023</small>
+                  </div>
+                </div>
+              </section>
+              <section id="OpcionCalif" class="card px-1 py-4">
+                <div class="card-body">
+                  <form id="formulario">
+                    <div class="mb-3">
+                      <label for="nombre" class="form-label">Nombre:</label>
+                      <input type="text" class="form-control" id="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="apellidos" class="form-label">Apellidos:</label>
+                      <input type="text" class="form-control" id="apellidos" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="edad" class="form-label">Materia:</label>
+                      <input type="text" class="form-control" id="materia" min="1" max="99" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="nombre" class="form-label">Calificacion:</label>
+                      <input type="number" class="form-control" id="calif" required>
                     </div>
                     <div class="d-flex flex-column text-center px-5 mt-3 mb-3">
                       <button type="button" class="btn btn-primary" onclick="guardar()">Guardar</button>

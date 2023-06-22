@@ -58,6 +58,10 @@ function agregar(){
 
     let materia=document.getElementById("OpcionMateria");
     materia.style.display="none";
+    let calif=document.getElementById("OpcionCalif");
+    calif.style.display="none";
+    let grupo=document.getElementById("OpcionGrupo");
+    grupo.style.display="none";
 
     if(opcionAlumno.style.display=="flex"){
         opcionAlumno.style.display="none"
@@ -70,11 +74,47 @@ function agregarmateria(){
     
     let alumno=document.getElementById("OpcionAlumno");
     alumno.style.display="none";
+    let grupo=document.getElementById("OpcionGrupo");
+    grupo.style.display="none";
+    let calif=document.getElementById("OpcionCalif");
+    calif.style.display="none";
     
     if(opcionMateria.style.display=="flex"){
         opcionMateria.style.display="none";
     }else{
         opcionMateria.style.display="flex";
+    };
+}
+function agregarcalif(){
+    let opcioncalif = document.getElementById("OpcionCalif");
+    
+    let alumno=document.getElementById("OpcionAlumno");
+    alumno.style.display="none";
+    let materia=document.getElementById("OpcionMateria");
+    materia.style.display="none";
+    let grupo=document.getElementById("OpcionGrupo");
+    grupo.style.display="none";
+    
+    if(opcioncalif.style.display=="flex"){
+        opcioncalif.style.display="none";
+    }else{
+        opcioncalif.style.display="flex";
+    };
+}
+function agregargrupo(){
+    let opciongrupo = document.getElementById("OpcionGrupo");
+    
+    let alumno=document.getElementById("OpcionAlumno");
+    alumno.style.display="none";
+    let materia=document.getElementById("OpcionMateria");
+    materia.style.display="none";
+    let calif=document.getElementById("OpcionCalif");
+    calif.style.display="none";
+    
+    if(opciongrupo.style.display=="flex"){
+        opciongrupo.style.display="none";
+    }else{
+        opciongrupo.style.display="flex";
     };
 }
 
