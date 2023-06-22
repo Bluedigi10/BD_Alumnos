@@ -10,3 +10,6 @@ body {
 form {
     display:block;
 }
+#OpcionAlumno,#OpcionMateria{
+    display: none;
+}

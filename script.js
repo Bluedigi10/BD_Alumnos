@@ -1,71 +1,83 @@
-class Alumno{
-    Nombre= '';
-    Apellido= '';
-    Edad= 0;
-    Materias= [];
-    Calificaciones= [];
-    
-    constructor (nombre,apellido,edad){
+//Inicio de prototipo
+const Alumno={
+    Nombre: '',
+    Apellido: '',
+    Edad: 0,
+    Materias: [],
+    Calificaciones: [],
+    //metodo que crea un nuevo objeto 
+    NuevoAlumno: function (nombre,apellido,edad,materias=[],calif=[]){
         this.Nombre=nombre;
         this.Apellido=apellido;
         this.Edad=edad;
-    };
-    AsignarMateria (Materia){
+        this.Materias=materias;
+        this.Calificaciones=calif;
+    },
+    //metodo que inscribe al alumno a materias
+    AsignarMateria: function (Materia){
         this.Materias.push(Materia);
-    }
-    AsignarCalif (Materia,calificacion){
+    },
+    //metodo que le asigna calificaion
+    AsignarCalif: function (Materia,calificacion){
         for(let i=0;i<this.Materias.length;i++){
             if(this.Materias[i]==Materia){
                 this.Calificaciones[i]=calificacion;
                 return;
             }
         }
-    }
-    MostrarAlumno (alumno){
+    },
+    //metodo que muestra el objeto
+    MostrarAlumno: function (alumno){
         console.log(alumno);
     }
-}
-let grupo=[];
-grupo[0]=new Alumno("Emmanuel","Matinez",24);
-grupo[0].AsignarMateria("Biologia");
-grupo[0].AsignarMateria("Matematicas");
-grupo[0].AsignarMateria("Español");
-grupo[0].AsignarCalif("Español",8);
-grupo[0].AsignarCalif("Matematicas",7);
-grupo[0].AsignarCalif("Biologia",1);
+};
+let Grupos=[
+    {'Nombre':"",Alumnos: []}
+];
+console.log(Grupos);
+var grupo=[];
 
-grupo[0].MostrarAlumno(grupo[0]);
-
-class Grupos{
-    Nombre = "";
-    Alumnos = [];
-    constructor(nombre,alumnos){
-        this.Nombre=nombre;
-        this.Alumnos=alumnos;
+function guardarAlumno(){
+    if(JSON.parse(localStorage.getItem("grupo"))!==null){
+        grupo = JSON.parse(localStorage.getItem("grupo"));
+    }else{
+        localStorage.setItem("grupo",JSON.stringify(grupo));
     }
-    BuscarNombre(nombre){
-        const size=this.Alumnos.length;
-        for(let i=0;i<size;i++){
-            if(this.Alumnos[i].Nombre===nombre){
-                console.log(this.Alumnos[i].Nombre);
-                return i;
-            }
-        }
-        return -1;
-    }
+    let nombre = document.getElementById('nombre').value;
+    let apellido = document.getElementById('apellidos').value;
+    let edad = document.getElementById('edad').value;
+    grupo.push(Object.create(Alumno));
+    grupo[grupo.length-1].NuevoAlumno(nombre,apellido,edad);
+    localStorage.setItem("grupo",JSON.stringify(grupo));
+    alert("Agregado con exito!");
+    console.log(JSON.stringify(grupo));
+    console.log(grupo);
+};
+function agregar(){
+    let opcionAlumno = document.getElementById("OpcionAlumno");
+
+    let materia=document.getElementById("OpcionMateria");
+    materia.style.display="none";
+
+    if(opcionAlumno.style.display=="flex"){
+        opcionAlumno.style.display="none"
+    }else{
+        opcionAlumno.style.display="flex";
+    };
+}
+function agregarmateria(){
+    let opcionMateria = document.getElementById("OpcionMateria");
+    
+    let alumno=document.getElementById("OpcionAlumno");
+    alumno.style.display="none";
+    
+    if(opcionMateria.style.display=="flex"){
+        opcionMateria.style.display="none";
+    }else{
+        opcionMateria.style.display="flex";
+    };
 }
 
-function guardar(){
-    let nombre = document.getElementById("nombre").value;
-    let apellidos = document.getElementById("apellidos").value;
-    let edad = document.getElementById("edad").value;
-    let materias = document.getElementById("materias").value;
-    let calificaciones = document.getElementById("calificaciones").value;
-
-    console.log("Guardando alumno")
-    console.log(nombre)
-    console.log(apellidos)
-    console.log(edad)
-    console.log(materias)
-    console.log(calificaciones)
+function salir(){
+    location.href="index.html";
 }
